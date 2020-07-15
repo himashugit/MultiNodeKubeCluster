@@ -1,8 +1,10 @@
 # MultiNodeKubeCluster
-## Step by Step guide to setup your Multinode Cluster 
+## Step by Step guide to setup your Multinode Cluster :sunglasses: :sunglasses:
+
+![setup](https://user-images.githubusercontent.com/51450944/87509145-f772f680-c63e-11ea-8804-199764cde244.PNG)
 
 
-> I have configured my setup as 1 Master Server and 2 Worker Node - where my PODs will be launched by Master. Install Docker-ce , kubelet on your Master. 
+> I have configured my setup as 1 Master Server and 2 Worker Node - Where my *PODs* will be launched by Master. Install Docker-ce , kubelet on your Master. 
 > Also install kubeadm to manage(bootstrap) the cluster. You can follow below links to install docker, kubelet,kubectl,kubeadm, disable firewall(not recommended for prod),      * SELinux disablement
 
 > https://download.docker.com/linux/centos/7/x86_64/stable/
@@ -14,9 +16,8 @@
 ![snap2](https://user-images.githubusercontent.com/51450944/87507780-fb514980-c63b-11ea-8ef9-7cabada50bf0.PNG)
 
 
-
-
-Kubernetes in RHEL ⅞ version doesn’t support cgroup drive so we need to change the cgroup driver for docker to systemd - https://github.com/kubernetes/minikube/issues/4770
+Kubernetes in *RHEL ⅞* version doesn’t support cgroup drive so we need to change the cgroup driver for docker to systemd - link
+ https://github.com/kubernetes/minikube/issues/4770
 
 **etc/docker/daemon.json**
 
@@ -38,7 +39,7 @@ Now this master VM is installed and configured we can now clone this and create 
 Set your hostname(hostnamectl set-hostname Master/Slave1/Slave2) before working inside cluster so they can connect and authenticate using hostname
 
 > Initialize your Master VM to make it master and provide a range of IP to provide to pods. 
-
+![initialize](https://user-images.githubusercontent.com/51450944/87509143-f6da6000-c63e-11ea-8daa-93a88b1bd8e7.PNG)
 
 > This will start generating all the relevant services for master as you can see below
 
@@ -65,3 +66,5 @@ Set your hostname(hostnamectl set-hostname Master/Slave1/Slave2) before working 
 Now use kubectl get nodes and you can see your MultiNode Cluster is ready :)
 
 ![snap11](https://user-images.githubusercontent.com/51450944/87507791-fc827680-c63b-11ea-96d5-ad74b8ed63e0.PNG)
+
+:smiley:	:smiley:	:smiley:	:smiley:	
